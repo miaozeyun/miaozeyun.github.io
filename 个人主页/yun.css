@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-size: 12px;
+    font-family: 微软雅黑;
+    background-color: #010101;
+}
+.header{
+    width: 1200px;
+    height: 60px;
+    background-color: #0F1014;
+    margin: 0 auto;
+}
+.center{
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+}
+.left{
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+.left .img1{
+    width: 39px;
+    height: 39px;
+    display: block;
+    background: #FFffff url("");
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.left .font{
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+}
+.font .zhaozhewei{
+    color: #BC683E;
+    font-size: 22px;
+    font-family: 华文楷体;
+}
+.font .english{
+    color: #9A9B9F;
+    font-size: 10px;
+
+}
+.tel{
+    color: #9A9B9F;
+    float: right;
+}
+.tel strong{
+    color: #BC683E ;
+    font-size: 16px;
+}
+.nav{
+    float: right;
+
+}
+.nav li{
+    float: left;
+    margin: 10px 20px;
+}
+.nav li a{
+    color: #9A9B9F;
+}
+.nav .first{
+    color: #BC683E;
+}
+
+
+.jiejian{
+    width: 1200px;
+    height: 400px;
+    margin: 20px auto;
+position: relative;
+}
+.jiejian .left{
+    width: 800px;
+    height: 400px;
+    float: left;
+}
+.jiejian .left img{
+    width: 600px;
+    height: 400px;
+    margin: 25px ;
+    border-radius: 50%;
+}
+.jiejian .dark{
+    color: #FFffff;
+    font-size: 48px;
+    line-height: 400px;
+}
+.jiejian .font{
+    color: #FFffff;
+    position: absolute;
+    top: 230px;
+    left: 728px;
+    font-size: 18px;
+    font-family: 华文楷体;
+}
+.geren .right{
+    width: 400px;
+    height: 350px;
+    background-color: #333;
+    border-radius: 20%;
+    position: absolute;
+    top: 40px;
+    left: 620px;
+}
+.geren .left{
+    width: 300px;
+    height: 350px;
+    background-color: #fffdef;
+    border-radius: 20%;
+    position: absolute;
+    top: 40px;
+    left: 220px;
+}
+.geren .left img{
+    width: 300px;
+    height: 350px;
+    border-radius: 20%;
+}
+.geren .right h1{
+    margin-left: 50px;
+    color: #9A9B9F;
+    margin-top: 20px;
+}
+.geren .right h3{
+    margin-left: 80px;
+    margin-top: 5px;
+    color: #9A9B9F;
+}
+.geren .right p{
+    width: 250px;
+    height: 100px;
+    margin-left: 80px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #9A9B9F;
+
+}
+
+
+
+.jineng{
+    width: 1200px;
+    height: 400px;
+    background: #0E0F13 url("");
+    margin: 10px auto;
+    position: relative;
+}
+.jineng  .line1{
+    width: 50px;
+    height: 1px;
+    background-color: #FFffff;
+    position: absolute;
+    top: 20px;
+    left: 490px;
+}
+.jineng  .line2{
+    width: 50px;
+    height: 1px;
+    background-color: #FFffff;
+    position: absolute;
+    top: 20px;
+    left: 640px;
+}
+.jineng .show{
+    color: #FFffff;
+    position: absolute;
+    top:8px;
+    left: 550px;
+    font-size: 20px;
+}
+.jineng .box1{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #3366ff;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    top: 100px;
+    left: 640px; font-size: 24px;
+    transition: all 1s;
+    opacity: 0.5;
+}
+.jineng .box2{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 100px;
+    background-color: #FF0099;
+    position: absolute;
+    top: 100px;
+    left: 440px;
+    border-radius: 50%; font-size: 24px;
+    transition: all 1s;
+    opacity: 0.5;
+}
+.jineng .box3{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 100px;
+    background-color: #00FF33;
+    position: absolute;
+    top: 100px;
+    left: 540px;
+    border-radius: 50%; font-size: 16px;
+    transition: all 1s;
+    opacity: 0.5;
+}
+.jineng .box4{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 100px;
+    background-color: #99FFFF;
+    position: absolute;
+    top: 158px;
+    left: 489px;
+    border-radius: 50%; font-size: 18px;
+    transition: all 1s;
+    opacity: 0.5;
+}
+.jineng .box5{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 100px;
+    background-color: #66FFCC;
+    position: absolute;
+    top: 158px;
+    left: 590px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 1s;
+    opacity: 0.5;
+}
+
+.jineng .box6{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
+    background-color: #990033;
+    position: absolute;
+    left: 539px;
+    top: 213px;
+    font-size: 24px;
+    transition: all 1s;
+    opacity: 0.5;
+}
+
+
+.zuopin{
+    width: 1200px;
+    height: 400px;
+    background-color: #13161B;
+    margin: 0 auto;
+    position: relative;
+}
+.zuopin  .line1{
+    width: 50px;
+    height: 1px;
+    background-color: #FFffff;
+    position: absolute;
+    top: 20px;
+    left: 490px;
+}
+.zuopin  .line2{
+    width: 50px;
+    height: 1px;
+    background-color: #FFffff;
+    position: absolute;
+    top: 20px;
+    left: 640px;
+}
+.zuopin .show{
+    color: #FFffff;
+    position: absolute;
+    top:8px;
+    left: 550px;
+    font-size: 20px;
+}
+.zuopin .box{
+    width: 600px;
+    height: 300px;
+    background-color: #000;
+    position: absolute;
+    top: 65px;
+    left: 289px;
+}
+.zuopin .box .xiaomi{
+    width: 200px;
+    height: 300px;
+}
+.zuopin .box .yidong{
+    width: 200px;
+    height: 150px;
+}
+.zuopin .box .tianmao{
+    width: 204px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+.zuopin .box .fanke{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+}
+
+
+.geren{
+    width: 1200px;
+    height: 400px;
+    background-color: #13161B;
+    position: relative;
+    margin: 0 auto;
+}
+.geren  .line1{
+    width: 50px;
+    height: 1px;
+    background-color: #FFffff;
+    position: absolute;
+    top: 20px;
+    left: 490px;
+}
+.geren  .line2{
+    width: 50px;
+    height: 1px;
+    background-color: #FFffff;
+    position: absolute;
+    top: 20px;
+    left: 640px;
+}
+.geren .show{
+    color: #FFffff;
+    position: absolute;
+    top:8px;
+    left: 550px;
+    font-size: 20px;
+}
+
+
+
+.bottom{
+    width: 1200px;
+    height: 100px;
+    margin: 0px auto;
+    border-top: 2px solid #FFffff ;
+}
+.bottom li{
+    float: left;
+    width: auto;
+    height: 100px;
+    margin-right: 80px;
+}
+.bottom li a{
+    color:#9A9B9F ;
+    line-height: 100px;
+    font-size: 20px;
+}
+.bottom strong{
+    color: #BC683E;
+}
+
+
+.gren{
+    width: 1200px;
+    height: 30px;
+    background-color: #2F2F2F;
+    margin: 0 auto;
+}
+.banquan{
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    line-height: 60px;
+    color:#9A9B9F ;
+    text-align: center;
+    font-size: 16px;
+}
+.banquan strong{
+    color: #BC683E;
+}
