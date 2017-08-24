@@ -293,36 +293,55 @@ position: relative;
     font-size: 20px;
 }
 .zuopin .box{
-    width: 600px;
-    height: 300px;
+    width: 810px;
+    height: 310px;
     background-color: #000;
     position: absolute;
     top: 65px;
-    left: 289px;
+    left: 189px;
 }
 .zuopin .box .xiaomi{
-    width: 100px;
+    width: 200px;
     height: 150px;
+    display: block;
+    float: left;
 }
 .zuopin .box .yidong{
     width: 200px;
     height: 150px;
+    display: block;
+    float: left;
+    margin-left: 20px;
 }
 .zuopin .box .tianmao{
-    width: 204px;
+    width: 200px;
     height: 150px;
-
+    display: block;
+    float: left;
+    margin-left: 20px;
 }
 .zuopin .box .fanke{
-    width: 250px;
+    width: 200px;
     height: 150px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 .zuopin .box .todo{
-    width: 95px;
+    display: block;
+    width: 150px;
     height: 150px;
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: -0px;
+}
+.zuopin .box .tianqi{
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 220px;
 }
 
 .geren{
