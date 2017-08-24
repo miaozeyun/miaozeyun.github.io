@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/todolist.css">
+</head>
+<body>
+    <!--
+    1.添加事件
+    2.查看时间
+    3.操作事件的状态
+    4.标记关键事件
+    5.查看已完成
+    6.删除已完成
+    -->
+    <!--
+    jquery
+    iconfont
+    css3
+    localstorage
+    div+css
+    -->
+    <section class="leftbar">
+        <h3>TODOLIST</h3>
+        <ul>
+            <li>查看待办事项</li>
+            <li>查看已完成事项</li>
+        </ul>
+    </section>
+    <div class="main">
+        <div class="container">
+            <div class="add item">
+                <h3>添加新的事项</h3>
+                <label>
+                 <textarea autofocus id="text"></textarea>
+                    <div class="notice"><span>0</span>/40</div>
+                </label>
+                <input type="button" value="提交" id="submit" class="btn">
+                <div class="close">&#xe641;</div>
+            </div>
+            <div class="wait item">
+                <h3>未完成事项</h3>
+                <ul></ul>
+                <div class="bottom">
+                <input type="button" value="移动到已完成" class="btn movebtn">
+                <input type="button" value="添加" class="btn addbtn">
+                </div>
+            </div>
+            <div class="done item">
+                <h3>已完成事项<i>&#xe625;</i></h3>
+                <ul></ul>
+                <div class="bottom">
+                <input type="button" value="清除" class="clearbtn btn">
+                <input type="button" value="添加" class="addbtn btn">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="css/jquery-1.8.3.min.js"></script>
+<script src="css/main.js"></script>
+</html>

@@ -1,6 +1,6 @@
-/**
+/*
+*
  * Created by mzy22 on 2017/8/13.
- */
 let box1 = document.querySelector(".jineng .box1");
 let box2 = document.querySelector(".jineng .box2")
 let box3 = document.querySelector(".jineng .box3")
@@ -63,5 +63,6 @@ maxbox.onmouseover=function () {
 maxbox.onmouseout=function () {
     //clearInterval(st)
 }
+*/
 
 
