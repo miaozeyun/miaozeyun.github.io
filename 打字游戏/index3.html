@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打字游戏</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .continer{
+            width: 1200px;
+            height: 759px;
+            margin: 0 auto;
+            background-color: #c7d8dd;
+        }
+        .left{
+            width: 1000px;
+            height: 100%;
+            background:url("2.jpg");
+            background-size: cover;
+            float: left;
+            position: relative;
+        }
+        .right{
+            width: 200px;
+            height: 100%;
+            background-color: #79a4dd;
+            float: left;
+        }
+        .box1{
+            width: 150px;
+            height: 60px;
+            background-color: #bc54dd;
+            margin: 20px auto;
+        }
+        .font{
+            width: 150px;
+            height: 30px;
+            background-color: #332add;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            color: #fffdef;
+        }
+        .num{
+            width: 150px;
+            height: 30px;
+            background-color: #fffdef;
+            font-size: 26px;
+            color: #000000;
+            line-height: 30px;
+            text-align: center;
+        }
+        .start,.zanting{
+            width: 150px;
+            height: 30px;
+            background-color:#332add ;
+            margin: 20px auto;
+            line-height: 30px;
+            text-align: center;
+            color: #FFffff;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        .letter{
+            width: 50px;
+            height: 50px;
+            background:url("4.jpg");
+            background-size: cover;
+            color: #000000;
+            line-height: 50px;
+            text-align: center;
+            font-size: 24px;
+            position: absolute;
+            top:0;
+            left: 0;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="continer">
+        <div class="left"></div>
+        <div class="right">
+            <div class="box1">
+                <div class="font">得分</div>
+                <div class="num" id="defen">0</div>
+            </div>
+            <div class="box1">
+                <div class="font">关卡</div>
+                <div class="num" id="guan">1</div>
+            </div>
+            <div class="box1">
+                <div class="font">血量</div>
+                <div class="num" id="bold">5</div>
+            </div>
+            <div class="start">开始</div>
+            <div class="zanting" id="zanting">暂停</div>
+        </div>
+    </div>
+</body>
+<script>
+    class gamedazi{
+        constructor(left,defen,guan,bold){
+            this.left=left;
+            this.guan=guan;
+            this.guannum=1;
+            this.defen=defen;
+            this.defennum=0;
+            this.letternum=3;
+            this.obj={};
+            this.speed=5;
+            this.height = window.innerHeight;
+            this.bold=bold;
+            this.boldnum=5;
+            this.kaiguan=true;
+            this.st=null;
+        }
+
+        start(){
+            for(var i=0;i<this.letternum;i++){
+                this._creatLetter();
+            }
+            this._move();
+            this._keydown();
+        }
+
+        _creatLetter(){
+            let newdiv = document.createElement("div");
+            newdiv.className="letter";
+            do {
+                let randomnum = Math.floor(Math.random() * 26 + 65);
+                var randomletter = String.fromCharCode(randomnum);
+            }while (this.obj[randomletter]);
+            newdiv.innerHTML=randomletter;
+
+            do {
+                var randomleft = Math.random() * 950;
+            }while (this._check(randomleft));
+
+            this.obj[randomletter]={left:randomleft,ele:newdiv};
+
+            let randomtop = Math.random()*100;
+            newdiv.style.left=randomleft+"px";
+            newdiv.style.top=randomtop+"px";
+            this.left.appendChild(newdiv);
+        }
+
+        _check(left){
+            for (var i in this.obj){
+                if (left>this.obj[i].left-50&&left<this.obj[i].left+50){
+                    return true;
+                }
+            }
+        }
+
+        _move(){
+            this.st=setInterval(function () {
+                for (let i in this.obj){
+                    let top = this.obj[i].ele.offsetTop;
+                    top+=this.speed;
+                    this.obj[i].ele.style.top=top+"px";
+                    if (top>this.height){
+                        this.left.removeChild(this.obj[i].ele);
+                        delete this.obj[i];
+                        this._creatLetter();
+                        this.boldnum--;
+                        this.bold.innerHTML=this.boldnum;
+                        if (this.boldnum===0){
+                            this._gameover();
+                        }
+                    }
+                }
+            }.bind(this),50)
+        }
+
+        _keydown(){
+            this.keydownHandler=function (e) {
+                let kc=e.keyCode;
+                let letter=String.fromCharCode(kc);
+                if(this.obj[letter]){
+                    this.left.removeChild(this.obj[letter].ele);
+                    delete this.obj[letter];
+                    this._creatLetter();
+                    this.defennum++;
+                    this.defen.innerHTML=this.defennum;
+                    if(this.defennum%10===0){
+                        this._update();
+                    }
+                }
+            }.bind(this);
+            document.addEventListener("keydown",this.keydownHandler)
+        }
+
+        _update(){
+            this.guannum++;
+            this.guan.innerHTML=this.guannum;
+            if (this.guannum<=3){
+                this._creatLetter()
+            }else {
+                this.speed++;
+            }
+        }
+
+        _gameover(){
+            alert(`游戏结束，得分为${this.defennum}`);
+            this.left.innerHTML="";
+            this.obj={};
+            this.defen.innerHTML=0;
+            this.defennum=0;
+            this.guan.innerHTML=1;
+            this.guannum=1;
+            this.bold.innerHTML=5;
+            this.boldnum=5;
+            this.kaiguan=true;
+            clearInterval(this.st);
+        }
+
+        zt(){
+            clearInterval(this.st);
+            document.removeEventListener("keydown",this.keydownHandler);
+        }
+
+        jx(){
+            this._move();
+            document.addEventListener("keydown",this.keydownHandler);
+        }
+    }
+
+    let zanting  =document.querySelector("#zanting");
+    let bold = document.querySelector("#bold");
+    let guan = document.querySelector("#guan");
+    let defen = document.querySelector("#defen");
+    let left = document.querySelector(".left");
+    let kaiguan=true;
+    let game = new gamedazi(left,defen,guan,bold);
+    let start = document.querySelector(".start");
+
+    start.onclick=function () {
+        if (game.kaiguan) {
+            game.kaiguan=false;
+            game.start();
+        }
+    }
+    console.log(zanting);
+
+    let flge = true;
+    zanting.onclick=function () {
+        if (flge){
+            game.zt();
+            this.innerHTML="继续";
+
+        }else {
+            game.jx();
+            this.innerHTML="暂停"
+        }
+        flge=!flge;
+    }
+
+</script>
+</html>
