@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-size: 14px ;
+    font-family: 微软雅黑;
+    background-color: #F0F0F0;
+    color: #666666;
+}
+
+/*头部*/
+.header{
+    width: 100%;
+    height: 120px ;
+    background-color: #FFffff;
+}
+.header .center{
+    width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+}
+.header .top{
+    width: 1140px;
+    height: 60px;
+}
+.header .top .left{
+    float: left;
+}
+.header .top .left img{
+    width: 180px;
+    height: 60px;
+}
+.header .top .right{
+    width: 350px;
+    height: 60px;
+    float: right;
+}
+.header .top .right span{
+    float: left;
+    line-height: 60px;
+}
+.header .right span:hover{
+    transition: all  1s;
+    color: red;
+    transform: translate(-10px);
+}
+.header .top .right input[type="text"]{
+    width: 200px;
+    height: 38px;
+    margin-top: 13px;
+    float: right;
+    padding-left: 20px;
+    background-color: #EEEEEE;
+    border: none;
+    border-radius: 3%;
+}
+.header .bottom{
+    width: 1140px;
+    height: 60px;
+}
+.header .bottom ul{
+    width: 480px;
+    height: 60px;
+    float: right;
+}
+.header .bottom li{
+    width: 80px;
+    height: 60px;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+}
+
+.header .bottom li a{
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    color: #666666;
+}
+.header .bottom li a:hover{
+    color:#ee5e16;
+}
+/*中间内容*/
+.center{
+    width: 1170px;
+    height: auto;
+    margin: 30px auto;
+
+}
+.context{
+    width: 877px;
+    height: 528px;
+    background-color: #FFffff;
+    float: left;
+}
+.context .title .font{
+    font-size: 32px;
+    line-height: 1.5;
+    padding-left: 30px;
+    padding-top: 30px;
+    color: #000000;
+}
+.context .title .num{
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    color: #a3afb7;
+    font-weight: 300;
+    border-bottom: 1px solid #f0f2f5;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.context .text{
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid #f0f2f5;
+}
+.context .text p{
+    font-size: 13px;
+    line-height: 2.4;
+    padding-top: 30px;
+    text-indent: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.context .bottom{
+    width: 100%;
+    height: 90px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.context .bottom a{
+    display: inline-block;
+    width: 322px;
+    height: 43px;
+    border-radius: 30%;
+    text-decoration: none;
+    color: #999999;
+    text-align: center;
+    line-height: 43px;
+    border: 1px solid #f0f2f5;
+    margin-left: 50px;
+}
+.context .bottom a:hover{
+    color: #FF6600;
+    border: 1px solid #FF6600;
+}
+
+.right{
+    width: 262px;
+    height: 528px;
+    float: right;
+}
+.right .search{
+    width: 262px;
+    height: 32px;
+}
+.right .search input[type="text"]{
+    width: 262px ;
+    height: 32px;
+    border: 1px solid #f0f2f5;
+    padding-left: 20px;
+    color: #76838f;
+}
+.right .tuijian{
+    width: 262px;
+    height: 390px;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+.right .tuijian .tit{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 16px;
+    line-height: 50px;
+    border-bottom: 1px solid #f0f2f5;
+}
+.right .tuijian .list{
+    width: 100%;
+    height: 66.6px;
+    padding: 12px 12px;
+    border-bottom: 1px solid #f0f5f7;
+
+}
+.right .tuijian .list a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #FF6600;
+}
+.right .zixun{
+    width: 100%;
+    height: 55px;
+    background-color: #FFffff;
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 16px;
+}
+.right .zixun a{
+    text-decoration: none;
+    font-size: 16px;
+}
+.clear{
+    clear: both;
+}
+
+
+/*公司业务展*/
+.show{
+    width: 100%;
+    height: 202px;
+    background-color: #FFffff;
+}
+.show .center{
+    width: 1140px;
+    height: 100%;margin: 0 auto;
+    padding: 40px;
+}
+.show .box1{
+    width: 108px;
+    height: 102px;
+    float: left;
+}
+.show .th{
+    font-size: 16px;
+    font-weight: bold;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.box1 li{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.box1 li a{
+    color: #999999;
+}
+.show .box2{
+    width: 108px;
+    height: 102px;
+    float: left;
+}
+.box2 li{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.box2 li a{
+    color: #999;
+}
+.show .box3{
+    width: 108px;
+    height: 102px;
+    float: left;
+}
+.box3 li{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.box3 li a{
+    color: #999;
+}
+.show .box4{
+    width: 108px;
+    height: 102px;
+    float: left;
+}
+.box4 li{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.box4 li a{
+    color: #999;
+}
+.show .box5{
+    width: 108px;
+    height: 102px;
+    float: left;
+}
+.box5 li{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.box5 li a{
+    color: #999;
+}
+.show .tel{
+    width: 250px;
+    height: 70px;
+    border-left:1px solid #666666;
+    float: left;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 50px;
+}
+.show .tel .num{
+    font-size: 24px;
+}
+.show .tel .font{
+    color: #999999;
+    text-align: left;
+    margin-left: 44px;
+
+}
+/*底部*/
+.footer{
+    width: 1140px;
+    height: 150px;
+    margin: 0 auto;
+}
+.footer .center{
+    width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+}
+.footer .font1{
+    width: auto;
+    height: 36.8px;
+    text-align: center;
+    line-height: 36.8px;
+}
+.footer .font1 a{
+    color: #999999;
+}
+.footer .font1 a:hover{
+    color: #ee5e16;
+    text-decoration: underline;
+}
+.footer .font2{
+    width: 100%;
+    text-align: center;
+    height: 50px ;
+    margin: 20px auto;
+    color: #999999;
+}
+.footer .font21{
+    margin-top: 20px;
+}
+.footer .font21 span{
+    color: #ee5c16;
+}
+
+
+
+
+

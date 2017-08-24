@@ -1,0 +1,743 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px ;
+    font-family: 微软雅黑;
+    background-color: #F0F0F0;
+    color: #666666;
+}
+
+
+
+#mask {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#carousel {
+    z-index: 2;
+    height: 200px;
+    margin-top: 50px;
+
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+#carousel img {
+    position: absolute;
+    left: 55%;
+    top: 60%;
+    width: 220px;
+    height: 150px;
+    margin-left: -150px;
+    margin-top: -100px;
+    border-radius: 8px;
+
+
+transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+
+
+/*头部*/
+.header{
+    width: 100%;
+    height: 120px ;
+    background-color: #FFffff;
+}
+.header .center{
+    width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+}
+.header .top{
+    width: 1140px;
+    height: 60px;
+}
+.header .top .left{
+    float: left;
+}
+.header .top .left img{
+    width: 180px;
+    height: 60px;
+}
+.header .top .right{
+    width: 350px;
+    height: 60px;
+    float: right;
+}
+.header .top .right span{
+    float: left;
+    line-height: 60px;
+}
+.header .right span:hover{
+    transition: all  1s;
+    color: red;
+    transform: translate(-10px);
+}
+.header .top .right input[type="text"]{
+    width: 200px;
+    height: 38px;
+    margin-top: 13px;
+    float: right;
+    padding-left: 20px;
+    background-color: #EEEEEE;
+    border: none;
+    border-radius: 3%;
+}
+.header .bottom{
+    width: 1140px;
+    height: 60px;
+}
+.header .bottom ul{
+    width: 480px;
+    height: 60px;
+    float: right;
+}
+.header .bottom li{
+    width: 80px;
+    height: 60px;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+}
+
+.header .bottom li a{
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    color: #666666;
+}
+.header .bottom li a:hover{
+    color:#ee5e16;
+}
+/*中间大段内容*/
+.context{
+    width: 1140px;
+    height: 2176px;
+    margin: 0 auto;
+}
+.context .banner{
+    width: 100%;
+    height: 550px;
+    background-color: #f2f2f2;
+    margin: 10px auto;
+}
+
+.context .public{
+    width: 100%;
+    height: 48px;
+    background-color: #FFffff;
+}
+.context .public .title{
+    width: 150px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #ee5e16;
+}
+.context .public .context{
+    float: left;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    line-height: 48px;
+}
+/*集团要闻*/
+.context .new{
+    width: 578px;
+    height: 330px;
+    background-color: #FFffff;
+    margin-top: 10px;
+    float: left;
+}
+.context .new .title{
+    width: 578px;
+    height: 50px;
+    padding: 20px;
+}
+.context .new .span1{
+    font-size: 18px;
+    font-weight: 700;
+    color: #666666;
+    float: left;
+}
+.context .new .span2{
+    float: right;
+    color: #ee5e16;
+}
+.context .new .text{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.context .new .text li{
+    width: 578px;
+    height: 32px;
+    padding-left: 20px;
+}
+.context .new .text li a{
+    color: #999999;
+    float: left;
+}
+.context .new .text li a:hover{
+    color: #ee5e16;
+    text-decoration: underline;
+}
+.context .new .text li span{
+    float: right;
+    padding-right: 30px;
+    color: #999999;
+}
+/*行业动态*/
+.trade{
+    width: 550px;
+    height: 330px;
+    background-color: #FFffff;
+    float: right;
+    margin-top: 10px;
+}
+.context .trade .title{
+    width: 550px;
+    height: 50px;
+    padding: 20px;
+}
+.context .trade .span1{
+    font-size: 18px;
+    font-weight: 700;
+    color: #666666;
+    float: left;
+}
+.context .trade .span2{
+    float: right;
+    color: #ee5e16;
+}
+.context .trade .text{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.context .trade .text li{
+    width: 578px;
+    height: 32px;
+    padding-left: 20px;
+}
+.context .trade .text li a{
+    color: #999999;
+    float: left;
+}
+.context .trade .text li a:hover{
+    color: #ee5e16;
+    text-decoration: underline;
+}
+.context .trade .text li span{
+    float: right;
+    padding-right: 30px;
+    color: #999999;
+    padding-right: 50px;
+}
+.clear{
+    clear: both;
+}
+/*最新资讯*/
+.information{
+    width: 758px;
+    height: 438px;
+    background-color: #FFffff;
+    margin-top: 30px;
+    float: left;
+}
+.information img{
+    width: 369px;
+    height: 438px;
+    float: left;
+}
+.information .zuixin{
+    width: 350px;
+    float: left;
+    overflow: hidden;
+    text-overflow:ellipsis
+
+}
+.context .zuixin .title{
+    width: 350px;
+    height: 50px;
+    padding: 20px;
+}
+.context .zuixin .span1{
+    font-weight: 700;
+    font-size: 18px;
+    color: #666666;
+    float: left;
+}
+.context .zuixin .span2{
+    float: right;
+    color: #ee5e16;
+}
+.context .zuixin .text{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.context .zuixin .text li{
+    width: 410px;
+    height: 32px;
+    padding-left: 20px;
+}
+.context .zuixin .text li a{
+    color: #999999;
+    float: left;
+}
+.context .zuixin .text li a:hover{
+    color: #ee5e16;
+    text-decoration: underline;
+}
+.context .zuixin .text li span{
+    float: right;
+    padding-right: 30px;
+    color: #999999;
+    padding-right: 50px;
+}
+/*媒体报道*/
+.context .ads{
+    width: 350px;
+    height: 438px;
+    float: right;
+    background-color: #FFffff;
+    overflow: hidden;
+    margin-top: 30px;
+}
+.context .ads .title{
+    width: 350px;
+    height: 50px;
+    padding: 20px;
+}
+.context .ads .span1{
+    font-size: 18px;
+    font-weight: 700;
+    color: #666666;
+    float: left;
+}
+.context .ads .span2{
+    float: right;
+    color: #ee5e16;
+}
+.context  .ads .text{
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+.context .ads .text li{
+    width: 420px;
+    height: 32px;
+    padding-left: 20px;
+}
+.context .ads .text li a{
+    color: #999999;
+    float: left;
+}
+.context .ads .text li a:hover{
+    color: #ee5e16;
+    text-decoration: underline;
+}
+.context .ads .text li span{
+    float: right;
+    padding-right: 30px;
+    color: #999999;
+}
+/*业务概览*/
+.context .work{
+    width: 758px;
+    height: 294px;
+    background-color: #FFffff;
+    margin-top: 30px;
+    float: left;
+    position: relative;
+}
+/*企业风采*/
+.context .fash{
+    width: 350px;
+    height: 294px;
+    float: right;
+    background-color: #FFffff;
+    margin-top: 30px;
+}
+.context .fash .font{
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    line-height: 50px;
+    margin-left: 15px;
+}
+.context .fash .img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.fash .img .img1{
+    width: 100%;
+    height: 241px;
+}
+.fash .img .img2{
+    top: 79px;
+    left: 115px;
+    position: absolute;
+}
+/*企业责任,人力资源，科技创新*/
+.context .box{
+    width: 100%;
+    height: 395px;
+    margin-top: 20px;
+}
+.context .box .duty{
+    width: 350px;
+    height: 100%;
+    background-color: #FFffff;
+    float: left;
+    margin-right: 45px;
+}
+.context .duty img{
+    width: 350px;
+    height: 170px;
+}
+.context .duty .font1{
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 60px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.context .duty .font1 a{
+    color: #1E2382;;
+}
+.duty .font2{
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.duty .font3{
+    font-size: 12px;
+    padding-left: 20px;
+    width: 100%;height: 30px;
+    line-height: 30px;
+}
+.duty .font4{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.duty .font4 a{
+    color:#ee5e16 ;
+}
+
+
+.context .box .people{
+    width: 350px;
+    height: 100%;
+    background-color: #FFffff;
+    float: left;
+    margin-right: 45px;
+}
+.context .people img{
+    width: 350px;
+    height: 170px;
+}
+.context .people .font1{
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 60px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.context .people .font1 a{
+    color: #1E2382;;
+}
+.people .font2{
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.people .font3{
+    font-size: 12px;
+    padding-left: 20px;
+    width: 100%;height: 30px;
+    line-height: 30px;
+}
+.people .font4{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.people .font4 a{
+    color:#ee5e16 ;
+}
+
+
+
+
+
+
+.context .box .chuangxin{
+    width: 350px;
+    height: 100%;
+    background-color: #FFffff;
+    float: right;
+}
+
+.context .chuangxin img{
+    width: 350px;
+    height: 170px;
+}
+.context .chuangxin .font1{
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 60px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.context .chuangxin .font1 a{
+    color: #1E2382;;
+}
+.chuangxin .font2{
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.chuangxin .font3{
+    font-size: 12px;
+    padding-left: 20px;
+    width: 100%;height: 30px;
+    line-height: 30px;
+}
+.chuangxin .font4{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.chuangxin .font4 a{
+    color:#ee5e16 ;
+}
+
+
+
+
+
+/*公司业务展*/
+.show{
+    width: 100%;
+    height: 202px;
+    background-color: #FFffff;
+}
+.show .center{
+    width: 1140px;
+    height: 100%;margin: 0 auto;
+    padding: 40px;
+}
+.show .box1{
+    width: 108px;
+    height: 102px;
+    float: left;
+}
+.show .th{
+    font-size: 16px;
+    font-weight: bold;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.box1 li{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.box1 li a{
+    color: #999999;
+}
+.show .box2{
+    width: 108px;
+    height: 102px;
+    float: left;
+}
+.box2 li{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.box2 li a{
+    color: #999;
+}
+.show .box3{
+    width: 108px;
+    height: 102px;
+    float: left;
+}
+.box3 li{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.box3 li a{
+    color: #999;
+}
+.show .box4{
+    width: 108px;
+    height: 102px;
+    float: left;
+}
+.box4 li{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.box4 li a{
+    color: #999;
+}
+.show .box5{
+    width: 108px;
+    height: 102px;
+    float: left;
+}
+.box5 li{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.box5 li a{
+    color: #999;
+}
+.show .tel{
+    width: 250px;
+    height: 70px;
+    border-left:1px solid #666666;
+    float: left;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 50px;
+}
+.show .tel .num{
+    font-size: 24px;
+}
+.show .tel .font{
+    color: #999999;
+    text-align: left;
+    margin-left: 44px;
+
+}
+/*底部*/
+.footer{
+    width: 1140px;
+    height: 150px;
+    margin: 0 auto;
+}
+.footer .center{
+    width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+}
+.footer .font1{
+    width: auto;
+    height: 36.8px;
+    text-align: center;
+    line-height: 36.8px;
+}
+.footer .font1 a{
+    color: #999999;
+}
+.footer .font1 a:hover{
+    color: #ee5e16;
+    text-decoration: underline;
+}
+.footer .font2{
+    width: 100%;
+    text-align: center;
+    height: 50px ;
+    margin: 20px auto;
+    color: #999999;
+}
+.footer .font21{
+    margin-top: 20px;
+}
+.footer .font21 span{
+    color: #ee5c16;
+}
+
+
+
+
+
+.work .font{
+    width: 100%;
+    height: 51px;
+    font-size: 18px;
+    color: #666666;
+    font-weight: 700;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+img{
+}
+.zp-slide{
+    overflow: hidden;
+    position: relative;
+}
+.zp-slide>ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 1600%;
+    transition: all 0.3s;
+    transform: translate3d(0px, 0px, 0px);
+}
+.zp-slide>ul>li{
+    float: left;
+}
+[class^=zp-slide-]{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    margin-top: -15px;
+    left: 30px;
+    opacity: 0.5;
+}
+[class^=zp-slide-]:hover{
+    opacity: 1;
+}
+.zp-slide-right{
+    left: auto;
+    right: 30px;
+}
+
+

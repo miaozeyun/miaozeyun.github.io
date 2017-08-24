@@ -1,0 +1,31 @@
+
+.maxbox{
+    width: 877px ;
+    height: auto;
+    float: left;
+}
+.box{
+    width: 877px;
+    height: 182px;
+    background-color: #FFffff;
+    padding: 20px;
+    margin: 20px auto;
+}
+.box .tit{
+    font-size: 22px;
+    color: #666666;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.box .p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #76838f;
+}
+.box .number{
+    font-size: 16px;
+    color: #a3afb7;
+    font-weight: 300;
+    margin-top: 10px;
+}
