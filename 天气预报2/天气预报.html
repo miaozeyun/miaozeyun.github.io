@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            margin: 0 auto;
+            width:100%;
+            background-color: #cccccc;
+        }
+        select{
+            margin: 0 15px;
+        }
+        .weathers{
+            padding-top: 65px;
+        }
+        .weathers ul{
+            overflow: hidden;
+        }
+        .local,.weathers ul li{
+            float: left;
+            width: 180px;
+            background:rgba(100,100,100,0.2);
+
+        }
+        .weathers ul li{
+            height:214px;
+            margin: 0 5px;
+        }
+        .weathers ul li:hover{
+            background: rgba(0,200,100,0.4);
+        }
+        .weathers ul li:first-child{
+            display: none;
+        }
+        .local{
+            background: rgba(0,200,100,0.2);
+            padding-bottom: 10px;
+            height:204px;
+            display: none;
+            text-align: center;
+            margin-left: 107px;
+        }
+        .city{
+            font-size:38px;
+            color: #000;
+            text-align: center;
+            margin: 50px auto;
+            position: absolute;
+            top: -43px;
+            left: 772px;
+        }
+        p{
+            margin-top: 10px;
+            text-align: center;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+        .box div{
+            margin-bottom: 10px;
+        }
+        .days ul li{
+            width:100px;
+            text-align: center;
+            float: left;
+            margin-bottom: 20px;
+            background: rgba(0,200,100,0.2);
+            border:4px solid #fff;
+        }
+        .areachoose {
+            display: inline-block;
+            /* margin-top: -34px; */
+            padding-bottom: -27px;
+        }
+        span{
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .daysindex{
+            width: 100px;
+            float: left;
+            padding: 15px;
+        }
+        .xinxi{
+            width: 70px;
+            height:70px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: rgba(0,200,100,0.2);
+            text-align: center;
+            padding: 18px;
+            /*line-height: 70px;*/
+        }
+        .yubao{
+            background:rgba(5, 251, 204, 0.68);
+            width:150px;
+            height:30px;
+            line-height:30px;
+            border-radius: 8px;
+        }
+        .box1{
+            width: 100%;
+            height: 70px;
+            line-height: 50px;
+            background-color: #cccccc;
+            margin-bottom: 50px;
+        }
+        .box2{
+            width: 100%;
+            height: 800px;
+            background: url("10.jpg")no-repeat;
+            background-size: cover;
+        }
+        .days ul{
+            /*height: 200px;*/
+            overflow: hidden;
+            width: 1318px;
+            float: left;
+            margin-left: 120px;
+        }
+        .xiangqing{
+            text-align: center;
+        }
+        h2{
+            text-align: left;
+            font-size:40px;
+            margin: 15px 50px;
+            font-weight: 500;
+            display: inline-block;
+        }
+        .pm2_5{
+            text-shadow: 1px 1px 1px #555;
+            color: #fff;
+        }
+        .box3{
+            width: 100%;
+            height: 50px;
+        }
+    </style>
+    <script src="weath.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="box1">
+        <h2>WEATHER</h2>
+        <div class="areachoose">
+            选择省<select id="province"></select>
+            选择市<select id="city"></select>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="weathers">
+            <div class="city"></div>
+            <div class="local">
+                <p class="week"></p>
+                <p>空气质量：<em class="pm2_5"></em></p>
+                <div></div>
+                <p class="temp">
+                    <i class="weather"></i>
+                </p>
+                <p class="temps"></p>
+                <p class="wind"></p>
+            </div>
+            <ul>
+                <!--<li>-->
+                <!--<p class="week">2017-08-15 星期二</p>-->
+                <!--<p>空气质量：<em class="pm2_5">56 轻度污染</em></p>-->
+                <!--<img src="" alt="">-->
+                <!--<p class="temp">27℃-->
+                <!--<i class="weather">晴</i>-->
+                <!--</p>-->
+                <!--<p class="temps">23~35℃</p>-->
+                <!--<p class="wind">东风 2级</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<p class="week">2017-08-15 星期二</p>-->
+                <!--<p>空气质量：<em class="pm2_5">56 轻度污染</em></p>-->
+                <!--<img src="" alt="">-->
+                <!--<p class="temp">27℃-->
+                <!--<i class="weather">晴</i>-->
+                <!--</p>-->
+                <!--<p class="temps">23~35℃</p>-->
+                <!--<p class="wind">东风 2级</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<p class="week">2017-08-15 星期二</p>-->
+                <!--<p>空气质量：<em class="pm2_5">56 轻度污染</em></p>-->
+                <!--<img src="" alt="">-->
+                <!--<p class="temp">27℃-->
+                <!--<i class="weather">晴</i>-->
+                <!--</p>-->
+                <!--<p class="temps">23~35℃</p>-->
+                <!--<p class="wind">东风 2级</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<p class="week">2017-08-15 星期二</p>-->
+                <!--<p>空气质量：<em class="pm2_5">56 轻度污染</em></p>-->
+                <!--<img src="" alt="">-->
+                <!--<p class="temp">27℃-->
+                <!--<i class="weather">晴</i>-->
+                <!--</p>-->
+                <!--<p class="temps">23~35℃</p>-->
+                <!--<p class="wind">东风 2级</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<p class="week">2017-08-15 星期二</p>-->
+                <!--<p>空气质量：<em class="pm2_5">56 轻度污染</em></p>-->
+                <!--<img src="" alt="">-->
+                <!--<p class="temp">27℃-->
+                <!--<i class="weather">晴</i>-->
+                <!--</p>-->
+                <!--<p class="temps">23~35℃</p>-->
+                <!--<p class="wind">东风 2级</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<p class="week">2017-08-15 星期二</p>-->
+                <!--<p>空气质量：<em class="pm2_5">56 轻度污染</em></p>-->
+                <!--<img src="" alt="">-->
+                <!--<p class="temp">27℃-->
+                <!--<i class="weather">晴</i>-->
+                <!--</p>-->
+                <!--<p class="temps">23~35℃</p>-->
+                <!--<p class="wind">东风 2级</p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="box3"></div>
+        <div class="days">
+            <ul>
+                <!--<li>-->
+                <!--<p class="time">23:00</p>-->
+                <!--<img src="" alt="">-->
+                <!--<p class="weather">晴</p>-->
+                <!--<span class="temp">27℃</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<p class="time">23:00</p>-->
+                <!--<img src="" alt="">-->
+                <!--<p class="weather">晴</p>-->
+                <!--<span class="temp">27℃</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<p class="time">23:00</p>-->
+                <!--<img src="" alt="">-->
+                <!--<p class="weather">晴</p>-->
+                <!--<span class="temp">27℃</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<p class="time">23:00</p>-->
+                <!--<img src="" alt="">-->
+                <!--<p class="weather">晴</p>-->
+                <!--<span class="temp">27℃</span>-->
+                <!--</li>-->
+            </ul>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="jquery.min.js"></script>
+<script src="index.js"></script>
+</html>
